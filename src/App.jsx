@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { IntroSectionContainer } from "./components/introSectionContainer/IntroSectionContainer";
 import "./css/App.css";
-import { Button } from "antd";
-
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <Button type="primary">hi</Button>;
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route path={"/intro-section"} element={<IntroSectionContainer />} />
+        </Routes>
+      </Router>
+    </>
+  );
 }
 
 export default App;

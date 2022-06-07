@@ -1,0 +1,65 @@
+.body--container {
+  display: flex;
+  flex-direction: column;
+}
+
+.body--image-container,
+.body--image {
+  width: 100%;
+}
+
+.body--text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+.body--title {
+  font-size: 2.15rem;
+  font-weight: 800;
+  padding: 0;
+  margin-bottom: 0.45rem;
+}
+.body--text-content {
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 0.75rem;
+}
+.body--button {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  border: none;
+  border-radius: 0.75rem;
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+}
+.body--client-container {
+  width: 100%;
+  height: 1.75rem;
+  display: flex;
+  padding: 0 0.5rem;
+  bottom: 0%;
+}
+.body--client {
+  width: 20%;
+  height: 100%;
+  margin: 0 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.audiophile {
+  background-image: var(--client-audiophile);
+}
+
+.databiz {
+  background-image: var(--client-databiz);
+}
+.maker {
+  background-image: var(--client-maker);
+}
+.meet {
+  background-image: var(--client-meet);
+}

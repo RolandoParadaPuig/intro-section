@@ -1,0 +1,17 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+.chart--container {
+  width: 100vw;
+  height: 100vh;
+  background: var(--almost-white);
+  box-shadow: 2px 2px 10px 3px #2a498c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
