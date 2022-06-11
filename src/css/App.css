@@ -11,6 +11,10 @@
   --client-databiz: url(../images/icons/client-databiz.svg);
   --client-maker: url(../images/icons/client-maker.svg);
   --client-meet: url(../images/icons/client-meet.svg);
+  --features-todo: url(../images/icons/icon-todo.svg);
+  --features-calendar: url(../images/icons/icon-calendar.svg);
+  --features-reminders: url(../images/icons/icon-reminders.svg);
+  --features-planning: url(../images/icons/icon-planning.svg);
 }
 *,
 ul,
@@ -28,20 +32,77 @@ body {
   font-family: "Epilogue", sans-serif;
   font-size: 18px;
   font-weight: 500;
-  background-color: #000;
   background-image: url(../images/3210292.jpg);
   background-size: cover;
 }
 
 @media (min-width: 769px) {
   .chart--container {
-    width: 95%;
-    height: 100%;
-    max-width: 1440px;
-    max-height: 720px;
+    width: 95vw;
+    height: 95vh;
     margin: 0 auto;
   }
   .chart--component {
     max-width: 20rem;
+  }
+  .header--btn-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 655px) {
+  .body--container {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    height: 90%;
+    width: 100%;
+  }
+  .body--image-mobile {
+    display: none;
+  }
+  .body--image-container {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    max-width: 35rem;
+  }
+  .body--image-desktop {
+    display: block;
+    max-width: 20rem;
+  }
+  .body--main-container {
+    align-self: center;
+    min-width: 20rem;
+    max-width: 35rem;
+  }
+  .body--title,
+  .body--text-content {
+    text-align: start;
+  }
+  .body--text-content {
+    max-width: 25rem;
+    text-align: justify;
+  }
+  .body--title {
+    font-size: 2.7rem;
+    line-height: 2.7rem;
+    font-weight: 800;
+  }
+  .body--text-container {
+    align-items: start;
+    font-size: 0.5rem;
+  }
+  .body--client-container {
+    margin-top: 3rem;
+  }
+  .body--button {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1023px) {
+  .body--title {
+    font-size: 5rem;
+    line-height: 5rem;
   }
 }

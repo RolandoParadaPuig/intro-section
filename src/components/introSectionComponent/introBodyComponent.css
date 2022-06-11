@@ -1,11 +1,16 @@
 .body--container {
   display: flex;
   flex-direction: column;
+  padding-top: 1.5rem;
 }
 
 .body--image-container,
-.body--image {
+.body--image-mobile {
   width: 100%;
+  display: block;
+}
+.body--image-desktop {
+  display: none;
 }
 
 .body--text-container {
