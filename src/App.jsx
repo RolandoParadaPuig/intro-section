@@ -6,7 +6,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path={"/intro-section"} element={<IntroSectionContainer />} />
+          <Route path={"/"} element={<IntroSectionContainer />} />
         </Routes>
       </Router>
     </>
