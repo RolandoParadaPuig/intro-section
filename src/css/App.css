@@ -37,14 +37,6 @@ body {
 }
 
 @media (min-width: 769px) {
-  .chart--container {
-    width: 95vw;
-    height: 95vh;
-    margin: 0 auto;
-  }
-  .chart--component {
-    max-width: 20rem;
-  }
   .header--btn-mobile {
     display: none;
   }

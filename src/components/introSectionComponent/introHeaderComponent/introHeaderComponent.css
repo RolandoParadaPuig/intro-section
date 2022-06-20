@@ -4,17 +4,22 @@
   width: 100%;
   position: relative;
   background-color: var(--almost-white);
+  display: flex;
+  justify-content: space-between;
 }
 
 .header--logo {
-  background-image: url(../../images/icons/logo.svg);
+  background-image: url(../../../images/icons/logo.svg);
   height: 2rem;
   min-width: 50px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
 }
-.header--navigation-menu-container {
+
+.header--navigation-menu--closed {
+  margin: 0 0 0 calc(34vw);
+  padding-top: 3.5rem;
   background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.55) 0,
@@ -22,9 +27,12 @@
     rgb(255, 255, 255, 1) 34%,
     rgb(255, 255, 255, 1) 100%
   );
-  width: 0;
   height: 100vh;
+  width: 0vw;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
   z-index: 5;
   top: 0;
   right: 0;
@@ -32,10 +40,31 @@
   overflow: hidden;
 }
 .header--navigation-menu {
-  height: 100vh;
   margin: 0 0 0 calc(34vw);
-  width: 66vw;
   padding-top: 3.5rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.55) 0,
+    rgba(0, 0, 0, 0.55) 34%,
+    rgb(255, 255, 255, 1) 34%,
+    rgb(255, 255, 255, 1) 100%
+  );
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  transition: all 350ms;
+  overflow: hidden;
+}
+
+.header--navigation-list,
+.header--navigation-auth {
+  width: 64%;
 }
 .header--navigation-btn {
   color: var(--Medium-gray);
@@ -96,17 +125,14 @@
   border-radius: 0.7rem;
 }
 .header--btn-mobile {
-  height: 85%;
+  height: 2rem;
   padding: 0.25rem 0;
-  width: 85%;
+  width: 2rem;
   max-width: 2rem;
   border: none;
   background-color: #fff;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0 auto;
-  z-index: 15;
+  z-index: 16;
 }
 .header--navigation-features-btn,
 .header--navigation-company-btn {
@@ -187,38 +213,41 @@
 }
 
 @media (min-width: 769px) {
-  .header--navigation-menu-container {
+  .header--component {
+    position: static;
+    justify-content: center;
+  }
+  .header--btn-mobile {
+    display: none;
+  }
+  .header--navigation-menu,
+  .header--navigation-menu--closed {
     background-image: none;
     background-color: var(--almost-white);
-    position: relative;
     padding: 0;
     margin: 0;
-    height: 2.5rem;
-    width: 100%;
-    max-width: 80vw;
-    z-index: 5;
     transition: all 350ms;
-    overflow: visible;
-  }
-  .header--navigation-menu {
+    position: static;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0;
-    margin: 0;
+    overflow: visible;
+    align-items: center;
   }
   .header--navigation-list {
+    margin-left: 5vw;
     display: flex;
     align-items: flex-start;
     align-items: center;
   }
   .header--navigation-auth {
+    flex-basis: 250px;
     display: flex;
     align-items: center;
   }
-  .header--navigation-menu > ul > li,
+
   .header--navigation-btn {
     padding: 0;
     margin: 0;
@@ -238,12 +267,12 @@
       rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
       rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     background-color: #fff;
-    top: 2rem;
+    top: 3.5rem;
   }
   .header--navigation-features-list {
-    right: 0.5rem;
+    left: 5vw;
+    width: 10rem;
   }
   .header--navigation-company-list {
-    right: -1rem;
   }
 }

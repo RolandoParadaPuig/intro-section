@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
 }
-.chart--container {
+.intro--container {
   width: 100vw;
   height: 100vh;
   background: var(--almost-white);

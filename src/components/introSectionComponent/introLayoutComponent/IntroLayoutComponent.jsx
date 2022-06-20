@@ -1,7 +1,7 @@
 import { Layout } from "antd";
 import React from "react";
-import { IntroBodyComponent } from "./IntroBodyComponent";
-import { IntroHeaderComponent } from "./IntroHeaderComponent";
+import { IntroBodyComponent } from "../introBodyComponent/IntroBodyComponent";
+import { IntroHeaderComponent } from "../introHeaderComponent/IntroHeaderComponent";
 import "./introLayoutComponent.css";
 export const IntroLayoutComponent = () => {
   return (
